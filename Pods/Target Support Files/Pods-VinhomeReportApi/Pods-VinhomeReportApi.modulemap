@@ -1,0 +1,6 @@
+framework module Pods_VinhomeReportApi {
+  umbrella header "Pods-VinhomeReportApi-umbrella.h"
+
+  export *
+  module * { export * }
+}

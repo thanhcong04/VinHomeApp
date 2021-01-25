@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.4.0)
+  - GrowingTextView (0.7.1)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+  - SteviaLayout (4.7.3)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - GrowingTextView (= 0.7.1)
+  - Kingfisher
+  - SteviaLayout
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GrowingTextView
+    - Kingfisher
+    - SteviaLayout
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  GrowingTextView: 6dff7eedf2fc93f8378d20d456782afd0267b0cc
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: f5fd00a91c2385c6752c2458b4258e23aff329bc
+
+COCOAPODS: 1.10.0
