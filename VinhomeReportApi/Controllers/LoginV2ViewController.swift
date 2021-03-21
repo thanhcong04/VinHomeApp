@@ -41,6 +41,21 @@ class LoginV2ViewController: UIViewController {
         layout()
    
     }
+//    // An nut back khi goi vao
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.isNavigationBarHidden = true
+//        UINavigationBar.appearance().backgroundColor = .clear
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
+//        UINavigationBar.appearance().backgroundColor = UIColor.AppColor.grayLight1
+        
+    }
 
     func layout() {
         
@@ -167,7 +182,7 @@ class LoginV2ViewController: UIViewController {
         }
         ApiManager.shared.login(phone: phone, password: password) { [weak self] in
             guard let strongSelf = self else { return }
-            let profileVC = HomeViewController()
+            let profileVC = ContainerViewController()
             strongSelf.navigationController?.pushViewController(profileVC, animated: false)
         } failure: { (err) in
             AlertHelper.sorry(message: err, viewController: self)

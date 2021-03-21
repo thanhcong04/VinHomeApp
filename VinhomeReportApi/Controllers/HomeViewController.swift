@@ -6,17 +6,16 @@
 //
 
 import UIKit
- 
+
 
 class HomeViewController: UIViewController {
     
     var delegate : HomeViewControllerDelage?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         view.backgroundColor = UIColor.AppColor.white
-        
 
         // Do any additional setup after loading the view.
     }
@@ -25,29 +24,26 @@ class HomeViewController: UIViewController {
         delegate?.handleMenuToggle()
         print("äbcbcbcbc")
     }
-    
-    
+
     func setupNavigationBar(){
         navigationItem.title = "Danh sách sự cố"
-        navigationController?.navigationBar.barTintColor = .darkGray
-        navigationController?.navigationBar.barStyle = .black
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-menu"), style: .plain, target: self, action: #selector(handleMenuToggle))
-
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
+        
+        
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToCreateIssue))
-     //   let searchBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
         navigationItem.rightBarButtonItems = [addBarButtonItem]
-        //addBarButtonItem.tintColor = UIColor.AppColor.pinkLight4
-       // searchBarButtonItem.tintColor = UIColor.white
-        //navigationController?.navigationBar.barTintColor = UIColor.AppColor.black
-    
-        //self.setupSlideMenuItem()
+        addBarButtonItem.tintColor = UIColor.AppColor.pinkLight4
+        navigationController?.navigationBar.barTintColor = UIColor.AppColor.black
+        
+        //set màu cho navi bar
+        navigationController?.navigationBar.barTintColor = UIColor.AppColor.pinkLight1
+        navigationController?.navigationBar.isTranslucent = false
     }
-
+    
     @objc func goToCreateIssue(){
-        let createVC = CreatIsueViewController()
+        let createVC = CreatIssueViewController()
         navigationController?.pushViewController(createVC, animated: true)
     }
-    
-    
+ 
 }

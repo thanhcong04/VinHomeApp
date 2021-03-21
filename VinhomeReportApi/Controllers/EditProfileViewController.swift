@@ -25,6 +25,7 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
 
     var profile: User?
+    var userProfile: User?
     var imagePicker: UIImagePickerController!
     var newUrl: String?
    
@@ -46,7 +47,9 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         layOut()
         setupData(profile)
+        getProfile()
         
+        setupNaviBar()
         view.backgroundColor = UIColor.white
         
         imagePicker = UIImagePickerController()
@@ -58,8 +61,29 @@ class EditProfileViewController: UIViewController {
         
         // Xu ly button luu
         saveButton.addTarget(self, action: #selector(saveData), for: .touchUpInside)
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
 
    
+    }
+    func setupNaviBar(){
+        navigationItem.title = "Cập nhật hồ sơ"
+        let signoutButton = UIBarButtonItem(image: UIImage.init(systemName: "chevron.backward"), style: .done, target: self, action: #selector(onBack))
+        navigationItem.leftBarButtonItem = signoutButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
+        
+        //set màu cho navi bar
+        navigationController?.navigationBar.barTintColor = UIColor.AppColor.pinkLight1
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    @objc func onBack(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    // hien thi thanh navibar
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     
@@ -71,9 +95,9 @@ class EditProfileViewController: UIViewController {
         //avatarImage.image = UIImage(named: "add-photo")
         avatarImage.contentMode = .scaleAspectFill
         avatarImage.clipsToBounds = true
-        avatarImage.layer.cornerRadius = 82
+        avatarImage.layer.cornerRadius = 60
         avatarImage.layer.borderWidth = 2
-        avatarImage.tintColor = UIColor.mainColor()
+        avatarImage.tintColor = UIColor.AppColor.pinkLight4
         avatarImage.layer.borderColor = UIColor.mainColor().cgColor
         
         
@@ -84,47 +108,47 @@ class EditProfileViewController: UIViewController {
         cameraImage.clipsToBounds = true
         //cameraImage.layer.borderWidth = 1
         cameraImage.isUserInteractionEnabled = true
-        cameraImage.tintColor = UIColor.mainColor()
+        cameraImage.tintColor = UIColor.AppColor.pinkLight4
         
         // layout txt số điện thoại
         userNameTextField.borderStyle = .roundedRect
-        userNameTextField.textColor = UIColor.mainColor()
-        userNameTextField.tintColor = UIColor.mainColor()
+        userNameTextField.textColor = UIColor.AppColor.pinkLight4
+        userNameTextField.tintColor = UIColor.AppColor.pinkLight4
         userNameTextField.keyboardType = .default
         userNameTextField.placeholder = "Họ và tên"
         
         // layout txt ngày sinh
         dayOfBirthTextField.borderStyle = .roundedRect
-        dayOfBirthTextField.textColor = UIColor.mainColor()
-        dayOfBirthTextField.tintColor = UIColor.mainColor()
+        dayOfBirthTextField.textColor = UIColor.AppColor.pinkLight4
+        dayOfBirthTextField.tintColor = UIColor.AppColor.pinkLight4
         dayOfBirthTextField.keyboardType = .numberPad
         dayOfBirthTextField.placeholder = "Ngày sinh"
         
         // layout txt Điạ chỉ
         addressTextField.borderStyle = .roundedRect
-        addressTextField.textColor = UIColor.mainColor()
-        addressTextField.tintColor = UIColor.mainColor()
+        addressTextField.textColor = UIColor.AppColor.pinkLight4
+        addressTextField.tintColor = UIColor.AppColor.pinkLight4
         addressTextField.keyboardType = .default
         addressTextField.placeholder = "Địa chỉ"
         
         // layout txt số điện thoại
         phoneNumberTextField.borderStyle = .roundedRect
-        phoneNumberTextField.textColor = UIColor.mainColor()
-        phoneNumberTextField.tintColor = UIColor.mainColor()
+        phoneNumberTextField.textColor = UIColor.AppColor.pinkLight4
+        phoneNumberTextField.tintColor = UIColor.AppColor.pinkLight4
         phoneNumberTextField.keyboardType = .numberPad
         phoneNumberTextField.placeholder = "Số điện thoại"
         
         // layout txt Email
         EmailTextField.borderStyle = .roundedRect
-        EmailTextField.textColor = UIColor.mainColor()
-        EmailTextField.tintColor = UIColor.mainColor()
+        EmailTextField.textColor = UIColor.AppColor.pinkLight4
+        EmailTextField.tintColor = UIColor.AppColor.pinkLight4
         EmailTextField.keyboardType = .default
         EmailTextField.placeholder = "Email"
         
         //layout button login
         saveButton.setTitle("Lưu", for: .normal)
         saveButton.setTitleColor(UIColor.white, for: .normal)
-        saveButton.backgroundColor = UIColor.mainColor()
+        saveButton.backgroundColor = UIColor.AppColor.pinkLight4
         saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         saveButton.layer.cornerRadius = 5
     }
@@ -141,6 +165,15 @@ class EditProfileViewController: UIViewController {
         addressTextField.text = data.address
         phoneNumberTextField.text = data.phoneNumber
         EmailTextField.text = data.email
+    }
+    func getProfile(){
+        ApiManager.shared.getProfile { [weak self] (data) in
+            guard let strongSelf = self else { return }
+            strongSelf.userProfile = data
+            strongSelf.setupData(data)
+        } failure: { (msg) in
+            AlertHelper.sorry(message: msg, viewController: self)
+        }
     }
     
     @objc func selectedImage(){
@@ -164,7 +197,7 @@ class EditProfileViewController: UIViewController {
               let date = dayOfBirthTextField.text,
               let address = addressTextField.text,
               let email = EmailTextField.text,
-              let profile = profile else {
+              let profile = userProfile else {
             return
         }
         
@@ -173,7 +206,7 @@ class EditProfileViewController: UIViewController {
         profile.address = address
         profile.email = email
         // Check nếu không thay đổi gì ảnh thì giữ nguyên ảnh cũ làm avatar
-        if newUrl == "" {
+        if newUrl != nil {
             profile.avatar = newUrl ?? ""
         }
         

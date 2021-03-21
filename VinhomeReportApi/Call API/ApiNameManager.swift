@@ -20,6 +20,8 @@ class ApiNameManager {
     let upload = "/api/upload"
     let updateProfile = "/api/accounts/update"
     let changePassword = "/api/accounts/changePassword"
+    let createIssue = "/api/issues"
+    let getIssues = "api/issues?limit=5&offset=0" 
     
     func returnUrl(_ nameRequest: String) -> String{
         return domain + nameRequest

@@ -37,8 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func startMain(){
-        let profileVC = ProfileViewController()
-        let navigationController = UINavigationController(rootViewController: profileVC)
+        let homeVC = ContainerViewController()
+        let navigationController = UINavigationController(rootViewController: homeVC)
         window?.rootViewController = navigationController
         window?.backgroundColor = .purple
         window?.makeKeyAndVisible()

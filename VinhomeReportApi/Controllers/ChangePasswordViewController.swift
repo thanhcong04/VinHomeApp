@@ -19,30 +19,47 @@ class ChangePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layOut()
-
+        setupNaviBar()
+        //navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
         // Do any additional setup after loading the view.
+    }
+    func setupNaviBar(){
+        navigationItem.title = "Đổi mật khẩu"
+        let signoutButton = UIBarButtonItem(image: UIImage.init(systemName: "chevron.backward"), style: .done, target: self, action: #selector(onBack))
+        navigationItem.leftBarButtonItem = signoutButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
+    }
+    
+    @objc func onBack(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    //hien thi thanh navibar
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     func layOut() {
         // layout txt mật khẩu cũ
         oldPasswordTextFiled.borderStyle = .roundedRect
-        oldPasswordTextFiled.textColor = UIColor.mainColor()
-        oldPasswordTextFiled.tintColor = UIColor.mainColor()
-        oldPasswordTextFiled.keyboardType = .numberPad
+        oldPasswordTextFiled.textColor = UIColor.AppColor.pinkLight4
+        oldPasswordTextFiled.tintColor = UIColor.AppColor.pinkLight4
+        oldPasswordTextFiled.keyboardType = .default
         oldPasswordTextFiled.placeholder = "Mật khẩu cũ"
         
         // layout txt mật khẩu mới
         newPasswordTextFiled.borderStyle = .roundedRect
-        newPasswordTextFiled.textColor = UIColor.mainColor()
-        newPasswordTextFiled.tintColor = UIColor.mainColor()
+        newPasswordTextFiled.textColor = UIColor.AppColor.pinkLight4
+        newPasswordTextFiled.tintColor = UIColor.AppColor.pinkLight4
         newPasswordTextFiled.keyboardType = .default
         newPasswordTextFiled.placeholder = "Mật khẩu mới"
         
         // layout txt Xác nhận mật khẩu
         confirmPassWorldTextFiled.borderStyle = .roundedRect
-        confirmPassWorldTextFiled.textColor = UIColor.mainColor()
-        confirmPassWorldTextFiled.tintColor = UIColor.mainColor()
-        confirmPassWorldTextFiled.keyboardType = .numberPad
+        confirmPassWorldTextFiled.textColor = UIColor.AppColor.pinkLight4
+        confirmPassWorldTextFiled.tintColor = UIColor.AppColor.pinkLight4
+        confirmPassWorldTextFiled.keyboardType = .default
         confirmPassWorldTextFiled.placeholder = "Xác nhận mật khẩu"
         
         //layout button Lưu

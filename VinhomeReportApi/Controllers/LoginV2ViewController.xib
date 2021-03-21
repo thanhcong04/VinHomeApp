@@ -62,7 +62,6 @@
                                         <constraint firstAttribute="width" constant="281" id="LOt-Dg-aHY"/>
                                         <constraint firstAttribute="height" constant="42" id="Uba-B4-o18"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -184,7 +183,7 @@
                                 <action selector="titleLogin:" destination="-1" eventType="touchUpInside" id="Tdd-BA-9xj"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-4O-XPb">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-4O-XPb">
                             <rect key="frame" x="156" y="0.0" width="156" height="40"/>
                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                             <constraints>

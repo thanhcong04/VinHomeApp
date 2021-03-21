@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MediaCollectionViewCell" customModule="VinhomeReportApi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="88" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="88" height="83"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera" translatesAutoresizingMaskIntoConstraints="NO" id="quR-aV-eh0">
+                        <rect key="frame" x="0.0" y="0.0" width="88" height="83"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKt-Ul-Cxl">
+                        <rect key="frame" x="63.5" y="0.0" width="24.5" height="23"/>
+                        <state key="normal" title="Button" image="ic_x"/>
+                        <connections>
+                            <action selector="onTabDelete:" destination="gTV-IL-0wX" eventType="touchUpInside" id="NIv-C2-vTJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="quR-aV-eh0" secondAttribute="trailing" id="1FB-nq-FXT"/>
+                <constraint firstItem="quR-aV-eh0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1aE-lw-vY5"/>
+                <constraint firstItem="ZKt-Ul-Cxl" firstAttribute="width" secondItem="quR-aV-eh0" secondAttribute="width" multiplier="0.28" id="3f3-Q9-6Hr"/>
+                <constraint firstItem="ZKt-Ul-Cxl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bgm-IN-BhL"/>
+                <constraint firstItem="quR-aV-eh0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gJ4-SR-VRY"/>
+                <constraint firstAttribute="bottom" secondItem="quR-aV-eh0" secondAttribute="bottom" id="qWW-jC-wTd"/>
+                <constraint firstItem="ZKt-Ul-Cxl" firstAttribute="height" secondItem="quR-aV-eh0" secondAttribute="height" multiplier="0.28" id="vwv-1Y-y2X"/>
+                <constraint firstAttribute="trailing" secondItem="ZKt-Ul-Cxl" secondAttribute="trailing" id="ylQ-08-yUo"/>
+            </constraints>
+            <size key="customSize" width="88" height="83"/>
+            <connections>
+                <outlet property="deleteButton" destination="ZKt-Ul-Cxl" id="JOH-dn-LcM"/>
+                <outlet property="photeImageView" destination="quR-aV-eh0" id="Hz5-71-gWX"/>
+            </connections>
+            <point key="canvasLocation" x="85.507246376811594" y="93.415178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_camera" width="100" height="100"/>
+        <image name="ic_x" width="24" height="24"/>
+    </resources>
+</document>

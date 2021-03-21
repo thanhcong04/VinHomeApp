@@ -32,22 +32,29 @@
 		F42CC48D25865611000CAC8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42CC48B25865611000CAC8F /* Main.storyboard */; };
 		F42CC48F25865612000CAC8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42CC48E25865612000CAC8F /* Assets.xcassets */; };
 		F42CC49225865612000CAC8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42CC49025865612000CAC8F /* LaunchScreen.storyboard */; };
-		F42CC49D25865FF6000CAC8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CC49B25865FF6000CAC8F /* LoginViewController.swift */; };
-		F42CC49E25865FF6000CAC8F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42CC49C25865FF6000CAC8F /* LoginViewController.xib */; };
-		F42CC4A325866D8C000CAC8F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CC4A125866D8C000CAC8F /* RegisterViewController.swift */; };
-		F42CC4A425866D8C000CAC8F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42CC4A225866D8C000CAC8F /* RegisterViewController.xib */; };
 		F42CC4A8258671CA000CAC8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CC4A6258671CA000CAC8F /* ProfileViewController.swift */; };
 		F42CC4A9258671CA000CAC8F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42CC4A7258671CA000CAC8F /* ProfileViewController.xib */; };
+		F430146025C44F8D002C87AF /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430145F25C44F8D002C87AF /* MenuCell.swift */; };
+		F430146D25C45748002C87AF /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F430146C25C45748002C87AF /* SideMenuViewController.xib */; };
+		F430147025C45D44002C87AF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430146F25C45D44002C87AF /* HeaderView.swift */; };
 		F437587E25B0928300DCCF90 /* LoginV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437587C25B0928300DCCF90 /* LoginV2ViewController.swift */; };
 		F437587F25B0928300DCCF90 /* LoginV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F437587D25B0928300DCCF90 /* LoginV2ViewController.xib */; };
 		F43758AD25B9B79400DCCF90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758AC25B9B79400DCCF90 /* HomeViewController.swift */; };
 		F43758B025B9B8D800DCCF90 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758AF25B9B8D800DCCF90 /* SlideMenuController.swift */; };
 		F43758BF25B9C40F00DCCF90 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758BE25B9C40F00DCCF90 /* SideMenuViewController.swift */; };
-		F43758C425B9CBA400DCCF90 /* CreatIsueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758C225B9CBA400DCCF90 /* CreatIsueViewController.swift */; };
-		F43758C525B9CBA400DCCF90 /* CreatIsueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43758C325B9CBA400DCCF90 /* CreatIsueViewController.xib */; };
 		F43758C825B9D28400DCCF90 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758C725B9D28400DCCF90 /* Menu.swift */; };
 		F43758CB25B9E16900DCCF90 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758CA25B9E16900DCCF90 /* Protocol.swift */; };
 		F43758CE25B9E21800DCCF90 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43758CD25B9E21800DCCF90 /* ContainerViewController.swift */; };
+		F45B7834260659500040C40B /* Media2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B7832260659500040C40B /* Media2CollectionViewCell.swift */; };
+		F45B7835260659500040C40B /* Media2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45B7833260659500040C40B /* Media2CollectionViewCell.xib */; };
+		F45B783826073FB60040C40B /* ListIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B783726073FB60040C40B /* ListIssue.swift */; };
+		F45B7842260741330040C40B /* ApiManaager + CreateIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B7841260741330040C40B /* ApiManaager + CreateIssue.swift */; };
+		F45B785A26078B910040C40B /* ApiManager + GetIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B785926078B910040C40B /* ApiManager + GetIssue.swift */; };
+		F45B786D260792780040C40B /* ListIssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B786B260792780040C40B /* ListIssueTableViewCell.swift */; };
+		F45B786E260792780040C40B /* ListIssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45B786C260792780040C40B /* ListIssueTableViewCell.xib */; };
+		F4C0292E25F9145C00CFC124 /* CreatIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0292C25F9145C00CFC124 /* CreatIssueViewController.swift */; };
+		F4C0292F25F9145C00CFC124 /* CreatIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C0292D25F9145C00CFC124 /* CreatIssueViewController.xib */; };
+		F4C0293225F9156F00CFC124 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0293125F9156E00CFC124 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,23 +87,30 @@
 		F42CC48E25865612000CAC8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42CC49125865612000CAC8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42CC49325865612000CAC8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F42CC49B25865FF6000CAC8F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F42CC49C25865FF6000CAC8F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		F42CC4A125866D8C000CAC8F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		F42CC4A225866D8C000CAC8F /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		F42CC4A6258671CA000CAC8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F42CC4A7258671CA000CAC8F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F430145C25BF0EAB002C87AF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F430145F25C44F8D002C87AF /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		F430146C25C45748002C87AF /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
+		F430146F25C45D44002C87AF /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F437587C25B0928300DCCF90 /* LoginV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginV2ViewController.swift; sourceTree = "<group>"; };
 		F437587D25B0928300DCCF90 /* LoginV2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginV2ViewController.xib; sourceTree = "<group>"; };
 		F43758AC25B9B79400DCCF90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F43758AF25B9B8D800DCCF90 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		F43758BE25B9C40F00DCCF90 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		F43758C225B9CBA400DCCF90 /* CreatIsueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatIsueViewController.swift; sourceTree = "<group>"; };
-		F43758C325B9CBA400DCCF90 /* CreatIsueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatIsueViewController.xib; sourceTree = "<group>"; };
 		F43758C725B9D28400DCCF90 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		F43758CA25B9E16900DCCF90 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		F43758CD25B9E21800DCCF90 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		F45B7832260659500040C40B /* Media2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media2CollectionViewCell.swift; sourceTree = "<group>"; };
+		F45B7833260659500040C40B /* Media2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Media2CollectionViewCell.xib; sourceTree = "<group>"; };
+		F45B783726073FB60040C40B /* ListIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIssue.swift; sourceTree = "<group>"; };
+		F45B7841260741330040C40B /* ApiManaager + CreateIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiManaager + CreateIssue.swift"; sourceTree = "<group>"; };
+		F45B785926078B910040C40B /* ApiManager + GetIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiManager + GetIssue.swift"; sourceTree = "<group>"; };
+		F45B786B260792780040C40B /* ListIssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIssueTableViewCell.swift; sourceTree = "<group>"; };
+		F45B786C260792780040C40B /* ListIssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListIssueTableViewCell.xib; sourceTree = "<group>"; };
+		F4C0292C25F9145C00CFC124 /* CreatIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatIssueViewController.swift; sourceTree = "<group>"; };
+		F4C0292D25F9145C00CFC124 /* CreatIssueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatIssueViewController.xib; sourceTree = "<group>"; };
+		F4C0293125F9156E00CFC124 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +153,8 @@
 				F4297279259A15B700F5C69F /* ApiManager + ChangPassword.swift */,
 				F4297296259CBB7000F5C69F /* ApiManager + UploadImage.swift */,
 				F42972A3259CBE2800F5C69F /* ApiManager + UpdateProfile.swift */,
+				F45B7841260741330040C40B /* ApiManaager + CreateIssue.swift */,
+				F45B785926078B910040C40B /* ApiManager + GetIssue.swift */,
 			);
 			path = "Call API";
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 				F429721E258A469000F5C69F /* DataImage.swift */,
 				F43758C725B9D28400DCCF90 /* Menu.swift */,
 				F43758CA25B9E16900DCCF90 /* Protocol.swift */,
+				F4C0293125F9156E00CFC124 /* Media.swift */,
+				F45B783726073FB60040C40B /* ListIssue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +184,7 @@
 		F429722D258A494B00F5C69F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F430146F25C45D44002C87AF /* HeaderView.swift */,
 				F42972612590F09700F5C69F /* Extension+UIColor.swift */,
 				F42972632590F09700F5C69F /* Extension+UIImageView.swift */,
 				F42972622590F09700F5C69F /* Extension+UIViewController.swift */,
@@ -222,10 +241,7 @@
 		F42CC49A25865B48000CAC8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F42CC49B25865FF6000CAC8F /* LoginViewController.swift */,
-				F42CC49C25865FF6000CAC8F /* LoginViewController.xib */,
-				F42CC4A125866D8C000CAC8F /* RegisterViewController.swift */,
-				F42CC4A225866D8C000CAC8F /* RegisterViewController.xib */,
+				F430145E25C44F6D002C87AF /* Cell */,
 				F42CC4A6258671CA000CAC8F /* ProfileViewController.swift */,
 				F42CC4A7258671CA000CAC8F /* ProfileViewController.xib */,
 				F429726925922E6F00F5C69F /* EditProfileViewController.swift */,
@@ -236,11 +252,24 @@
 				F437587D25B0928300DCCF90 /* LoginV2ViewController.xib */,
 				F43758AC25B9B79400DCCF90 /* HomeViewController.swift */,
 				F43758BE25B9C40F00DCCF90 /* SideMenuViewController.swift */,
-				F43758C225B9CBA400DCCF90 /* CreatIsueViewController.swift */,
-				F43758C325B9CBA400DCCF90 /* CreatIsueViewController.xib */,
+				F430146C25C45748002C87AF /* SideMenuViewController.xib */,
 				F43758CD25B9E21800DCCF90 /* ContainerViewController.swift */,
+				F4C0292C25F9145C00CFC124 /* CreatIssueViewController.swift */,
+				F4C0292D25F9145C00CFC124 /* CreatIssueViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F430145E25C44F6D002C87AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F430145F25C44F8D002C87AF /* MenuCell.swift */,
+				F45B7832260659500040C40B /* Media2CollectionViewCell.swift */,
+				F45B7833260659500040C40B /* Media2CollectionViewCell.xib */,
+				F45B786B260792780040C40B /* ListIssueTableViewCell.swift */,
+				F45B786C260792780040C40B /* ListIssueTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,13 +331,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C0292F25F9145C00CFC124 /* CreatIssueViewController.xib in Resources */,
 				F42CC4A9258671CA000CAC8F /* ProfileViewController.xib in Resources */,
-				F42CC49E25865FF6000CAC8F /* LoginViewController.xib in Resources */,
 				F437587F25B0928300DCCF90 /* LoginV2ViewController.xib in Resources */,
 				F429727725923A1D00F5C69F /* ChangePasswordViewController.xib in Resources */,
-				F42CC4A425866D8C000CAC8F /* RegisterViewController.xib in Resources */,
+				F45B7835260659500040C40B /* Media2CollectionViewCell.xib in Resources */,
+				F430146D25C45748002C87AF /* SideMenuViewController.xib in Resources */,
 				F429726C25922E6F00F5C69F /* EditProfileViewController.xib in Resources */,
-				F43758C525B9CBA400DCCF90 /* CreatIsueViewController.xib in Resources */,
+				F45B786E260792780040C40B /* ListIssueTableViewCell.xib in Resources */,
 				F42CC49225865612000CAC8F /* LaunchScreen.storyboard in Resources */,
 				F42CC48F25865612000CAC8F /* Assets.xcassets in Resources */,
 				F42CC48D25865611000CAC8F /* Main.storyboard in Resources */,
@@ -365,23 +395,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4297237258A546800F5C69F /* AlertHelper.swift in Sources */,
+				F45B7842260741330040C40B /* ApiManaager + CreateIssue.swift in Sources */,
 				F437587E25B0928300DCCF90 /* LoginV2ViewController.swift in Sources */,
+				F45B7834260659500040C40B /* Media2CollectionViewCell.swift in Sources */,
+				F430146025C44F8D002C87AF /* MenuCell.swift in Sources */,
 				F43758C825B9D28400DCCF90 /* Menu.swift in Sources */,
 				F4297297259CBB7000F5C69F /* ApiManager + UploadImage.swift in Sources */,
+				F4C0292E25F9145C00CFC124 /* CreatIssueViewController.swift in Sources */,
 				F4297233258A52D100F5C69F /* ApiManager + Login.swift in Sources */,
 				F42CC4A8258671CA000CAC8F /* ProfileViewController.swift in Sources */,
 				F42972512590EEA200F5C69F /* ApiManager + GetProfile.swift in Sources */,
+				F45B783826073FB60040C40B /* ListIssue.swift in Sources */,
 				F42972662590F09700F5C69F /* Extension+UIImageView.swift in Sources */,
 				F429727625923A1D00F5C69F /* ChangePasswordViewController.swift in Sources */,
-				F43758C425B9CBA400DCCF90 /* CreatIsueViewController.swift in Sources */,
 				F42972652590F09700F5C69F /* Extension+UIViewController.swift in Sources */,
 				F429722A258A472900F5C69F /* ApiNameManager.swift in Sources */,
-				F42CC49D25865FF6000CAC8F /* LoginViewController.swift in Sources */,
+				F4C0293225F9156F00CFC124 /* Media.swift in Sources */,
 				F43758AD25B9B79400DCCF90 /* HomeViewController.swift in Sources */,
+				F430147025C45D44002C87AF /* HeaderView.swift in Sources */,
+				F45B785A26078B910040C40B /* ApiManager + GetIssue.swift in Sources */,
+				F45B786D260792780040C40B /* ListIssueTableViewCell.swift in Sources */,
 				F429726B25922E6F00F5C69F /* EditProfileViewController.swift in Sources */,
 				F42972642590F09700F5C69F /* Extension+UIColor.swift in Sources */,
 				F4297227258A46FC00F5C69F /* ApiManager.swift in Sources */,
-				F42CC4A325866D8C000CAC8F /* RegisterViewController.swift in Sources */,
 				F43758BF25B9C40F00DCCF90 /* SideMenuViewController.swift in Sources */,
 				F43758B025B9B8D800DCCF90 /* SlideMenuController.swift in Sources */,
 				F4297223258A46C400F5C69F /* TPKeyboardAvoidingTableView.swift in Sources */,

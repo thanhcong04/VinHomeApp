@@ -13,16 +13,25 @@ class ContainerViewController: UIViewController {
     var menuController : UIViewController!
     var centerController: UIViewController!
     var isExpanded = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.AppColor.pinkLight1
         configMenuViewController()
         configSideMenuViewController()
-        // Do any additional setup after loading the view.
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
+    // An nut back khi goi vao
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
+    
+    // mày sắc của statusBar
+//    override var preferredStatusBarStyle: UIStatusBarStyle{
+//        return .darkContent
+//    }
     
     func configMenuViewController() {
         let homeController = HomeViewController()
@@ -46,12 +55,12 @@ class ContainerViewController: UIViewController {
     func showSideMenuViewController(shouldExpend : Bool) {
         if shouldExpend {
             //show menu
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
             }, completion: nil)
         }else{
             //hide menu
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = 0
             }, completion: nil)
             

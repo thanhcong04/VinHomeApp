@@ -34,6 +34,12 @@ class ProfileViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     // gọi lại hàm lấy dữ liệu profile sau khi update
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -43,14 +49,22 @@ class ProfileViewController: UIViewController {
     
     //cấu hình thanh navibar
     func setupNaviBar(){
+        navigationItem.title = "Hồ sơ cá nhân"
+        
         let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .done, target: self, action: #selector(onEdit))
         
         let changePasswordButton = UIBarButtonItem(image: UIImage(systemName: "lock"), style: .done, target: self, action: #selector(changePassword))
         
         navigationItem.rightBarButtonItems = [editButton, changePasswordButton]
         
-        let signoutButton = UIBarButtonItem(image: UIImage.init(systemName: "return"), style: .done, target: self, action: #selector(onLogout))
+        
+        let signoutButton = UIBarButtonItem(image: UIImage.init(systemName: "return"), style: .done, target: self, action: #selector(onback))
         navigationItem.leftBarButtonItem = signoutButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
+        
+        //set màu cho navi bar
+        navigationController?.navigationBar.barTintColor = UIColor.AppColor.pinkLight1
+        navigationController?.navigationBar.isTranslucent = false
     }
 
     func layOut() {
@@ -112,6 +126,14 @@ class ProfileViewController: UIViewController {
 //        saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
 //        saveButton.layer.cornerRadius = 5
     }
+    @objc func onback(){
+//        let loginVC = HomeViewController()
+//        let navigationController = UINavigationController(rootViewController: loginVC)
+//        navigationController.modalPresentationStyle = .fullScreen
+//        self.present(navigationController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
+    }
     @objc func onLogout(){
         UserDefaults.standard.removeObject(forKey: "token")
 //        if isFirst {
@@ -130,6 +152,7 @@ class ProfileViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Cập nhật hồ sơ"
         navigationItem.backBarButtonItem = backItem
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
         
         let editVC = EditProfileViewController()
         // gửi profile sang màn account để chỉnh sửa
@@ -143,6 +166,7 @@ class ProfileViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Đổi mật khẩu"
         navigationItem.backBarButtonItem = backItem
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.AppColor.pinkLight4
         AlertHelper.confirmOrCancel(message: "Bạn muốn thay đổi mật khẩu?", viewController: self) {
             self.navigationController?.pushViewController(editVC, animated: true)
         }
@@ -160,7 +184,7 @@ class ProfileViewController: UIViewController {
     func setupData(_ data: User?){
         guard let data = data else { return }
         if data.avatar.isEmpty {
-            avatarImage.image = UIImage(named: "logo")
+            avatarImage.image = UIImage(named: "add-photo")
         }else{
             avatarImage.setImage(urlString: data.avatar)
         }
